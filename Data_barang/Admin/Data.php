@@ -130,7 +130,7 @@ error_reporting(0);
             ?>
 
 
-            
+
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <?php
@@ -308,6 +308,7 @@ if(isset($_POST['kirim'])){
           NULL,
           '$modald'
         )");
+        
 
 
         if($insert && $insert_1){
@@ -379,12 +380,16 @@ $jum = $row['id'];
   $jumlahB=mysqli_fetch_array($Jumlah_B);
 
 
+    $Jumlah_y=mysqli_query($conn, "select sum(hargaU) as tor from keluar");
+    $jumlahd=mysqli_fetch_array($Jumlah_y);
+
+
 ?>
 
 
 <?php
 
-$untung = ($pemasukan['dari']) - ($total['total']);
+$untung = ($jumlahd['tor']) - ($total['total']);
 
 ?>
 
@@ -398,7 +403,7 @@ $untung = ($pemasukan['dari']) - ($total['total']);
 <p class="ml-5">Jumlah Modal:<?php   echo "<b> Rp.". number_format($total['total']).",-</b>";  ?></p>
 <p class="ml-5">Jumlah Produk: &nbsp; <?php echo "$jum"; ?></p>
 <p class="ml-5">Jumlah Barang: &nbsp; <?php echo "". number_format($jumlahB['jumlah'])."&nbsp; Barang"; ?></p>
-<p class="ml-5">Keuntungan Dagang: &nbsp; <?php echo "Rp.". number_format($pemasukan['dari']).""."-"."Rp.". number_format($total['total']).""; ?></p>
+<p class="ml-5">Keuntungan Dagang: &nbsp; <?php echo "Rp.". number_format($jumlahd['tor']).""."-"."Rp.". number_format($total['total']).""; ?></p>
 <p class="ml-5">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Total: <?php echo "<b> Rp.".number_format($untung).""; ?></p>
 
   <div class="card shadow  ml-4 mr-4">

@@ -256,13 +256,7 @@ if(isset($_POST['kirim'])){
   $untung = $harga * $jumlah;
 
 
-  $insert = mysqli_query($conn, "INSERT INTO keluar VALUES (
-   NULL,
-  '$tanggal',
-  '$jenis',
-  '$untung',
-  '$jumlah'
-    )");
+
 
 
 
@@ -270,13 +264,26 @@ $manggil=mysqli_query($conn, "select * from masuk where nama = '$jenis'");
 $total =mysqli_fetch_array($manggil);
 $jadi = $total['JumlahB'];
 $pengurangan = $jadi - $jumlah;
-$update = mysqli_query($conn, "UPDATE masuk SET JumlahB = '$pengurangan' WHERE nama = '$jenis'");
 
 
 
-    if($insert AND $update){
+
+    if($pengurangan >= 0){
 
 
+
+
+      $insert = mysqli_query($conn, "INSERT INTO keluar VALUES (
+       NULL,
+      '$tanggal',
+      '$jenis',
+      '$untung',
+      '$jumlah'
+        )");
+
+    $update = mysqli_query($conn, "UPDATE masuk SET JumlahB = '$pengurangan' WHERE nama = '$jenis'");
+
+if($insert AND $update){
 
   echo "<div class='col-md-10 col-sm-12 col-xs-12 ml-5'>";
    echo "<div class='alert alert-primary mt-4 ml-5' role='alert'>";
@@ -284,6 +291,8 @@ $update = mysqli_query($conn, "UPDATE masuk SET JumlahB = '$pengurangan' WHERE n
    echo   "</div>";
    echo "</div>";
 
+
+}
 
 
 
@@ -309,6 +318,8 @@ $update = mysqli_query($conn, "UPDATE masuk SET JumlahB = '$pengurangan' WHERE n
  ?>
 
 
+
+
 <div class="row mt-5 mr-4">
   <div class="col-md-8">
     <?php
@@ -327,6 +338,15 @@ $update = mysqli_query($conn, "UPDATE masuk SET JumlahB = '$pengurangan' WHERE n
   </div>
 </div>
 
+<?php
+if($jum <= 0){
+  echo "<div class='col-md-10 col-sm-12 col-xs-12 ml-5'>";
+     echo "<div class='alert alert-danger mt-4 ml-5' role='alert'>";
+    echo "<p><center><b>Data Anda Masih Kosong</b></center></p>";
+     echo   "</div>";
+     echo "</div>";
+}
+?>
  <div class="col-md-12 col-sm-12 col-xs-12  mt-5">
  <table class="table mb-5">
    <thead>

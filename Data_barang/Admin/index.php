@@ -31,6 +31,7 @@ $jum = $row['id'];
 
 
 
+
  ?>
 
 <!DOCTYPE html>
@@ -294,7 +295,7 @@ $jum = $row['id'];
             <!-- Content Column -->
             <div class="col-lg-12 mb-4">
 
-              
+
             <div class="col-lg-6 mb-4">
 
 

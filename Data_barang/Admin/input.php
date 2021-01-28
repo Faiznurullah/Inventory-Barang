@@ -348,7 +348,8 @@ if($jum <= 0){
 }
 ?>
  <div class="col-md-12 col-sm-12 col-xs-12  mt-5">
- <table class="table mb-5">
+   <div class="table-responsive service">
+   <table class="table table-bordered table-hover  mt-3 text-nowrap css-serial">
    <thead>
      <tr>
 
@@ -426,7 +427,7 @@ if($tesd > 0 ){
 
  </ul>
  </nav>
-
+</div>
 </div>
 
 </div>

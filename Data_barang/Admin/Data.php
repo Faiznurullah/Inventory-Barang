@@ -11,6 +11,7 @@ error_reporting(0);
 <!doctype html>
 <html lang="en">
 
+
 <head>
 
   <meta charset="utf-8">
@@ -308,7 +309,7 @@ if(isset($_POST['kirim'])){
           NULL,
           '$modald'
         )");
-        
+
 
 
         if($insert && $insert_1){
@@ -450,7 +451,8 @@ $start = ($page - 1) * $hal;
 
 
 <div class="col-md-12 col-sm-12 col-xs-12  mt-5">
-<table class="table mb-5">
+  <div class="table-responsive service">
+  <table class="table table-bordered table-hover  mt-3 text-nowrap css-serial">
   <thead>
     <tr>
       <th scope="col">No</th>
@@ -574,6 +576,7 @@ if(mysqli_num_rows($brg)){
 
 </ul>
 </nav>
+</div>
 </div>
 
 

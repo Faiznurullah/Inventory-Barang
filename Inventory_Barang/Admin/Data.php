@@ -105,7 +105,7 @@ error_reporting(0);
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-            
+
             <?php
                         $nama = mysqli_query($conn, "select * from about");
                         $profile = mysqli_fetch_array($nama);
@@ -251,6 +251,7 @@ if(isset($_POST['kirim'])){
   $jual = htmlspecialchars($_POST['jual']);
   $jumlah = htmlspecialchars($_POST['jumlah']);
   $modald = $modal * $jumlah;
+
 
 
 
@@ -571,6 +572,20 @@ if(mysqli_num_rows($brg)){
 
       </div>
       <!-- End of Content Wrapper -->
+
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span><p class="mb-1">Copyright &copy; <a href="https://github.com/Faiznurullah" style="text-decoration: none;"><b>Faiz Nurullah</b></a></p></span><br>
+          </div>
+        </div>
+      </footer>
+      </div>
+
+
+
 
     </div>
     <!-- End of Page Wrapper -->

@@ -106,7 +106,7 @@ ob_start()
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-          
+
 <?php
             $nama = mysqli_query($conn, "select * from about");
             $profile = mysqli_fetch_array($nama);
@@ -426,12 +426,22 @@ if($tesd > 0 ){
 
 
 
-</div>
-<!-- End of Content Wrapper -->
-
 
 </div>
-<!-- End of Page Wrapper -->
+
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+  <div class="container my-auto">
+    <div class="copyright text-center my-auto">
+      <span><p class="mb-1">Copyright &copy; <a href="https://github.com/Faiznurullah" style="text-decoration: none;"><b>Faiz Nurullah</b></a></p></span><br>
+    </div>
+  </div>
+</footer>
+</div>
+
+</div>
+</div>
+
 
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">

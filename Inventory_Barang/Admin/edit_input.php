@@ -1,5 +1,6 @@
 
 
+
 <?php
 session_start();
 
@@ -7,12 +8,14 @@ if($_SESSION['password']=='')
 {
     header("location:login.php");
 }
-  include 'koneksi.php';
-  error_reporting(0);
+include 'koneksi.php';
+error_reporting(0);
 
-  $nama = mysqli_query($conn, "select * from about");
-  $profile = mysqli_fetch_array($nama);
+$t = mysqli_query($conn, "select * from about");
+$profile = mysqli_fetch_array($t);
+
 ob_start()
+
 
  ?>
 <!doctype html>
@@ -134,7 +137,7 @@ ob_start()
 
 
 
-          
+
 
             <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -176,7 +179,6 @@ ob_start()
           </ul>
         </nav>
         <!-- End of Topbar -->
-
 
               <?php
                 $namab= ($_GET['id']);
@@ -240,7 +242,7 @@ ob_start()
 
 
           </div>
-            </div>
+
 
             <?php
 
@@ -271,6 +273,7 @@ ob_start()
               }else{
 
 
+
                                 echo "<div class='col-md-10 col-sm-12 col-xs-12 ml-5'>";
                                    echo "<div class='alert alert-danger mt-4 ml-5' role='alert'>";
                                   echo "<p><center>Mengedit Data Gagal</center></p>";
@@ -284,51 +287,69 @@ ob_start()
 
 
           ?>
+        </div>
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span><p class="mb-1">Copyright &copy; <a href="https://github.com/Faiznurullah" style="text-decoration: none;"><b>Faiz Nurullah</b></a></p></span><br>
+            </div>
+          </div>
+        </footer>
+
+          </div>
 
 
-                        <!-- Scroll to Top Button-->
-                        <a class="scroll-to-top rounded" href="#page-top">
-                          <i class="fas fa-angle-up"></i>
-                        </a>
+          </div>
 
-                        <!-- Logout Modal-->
-                        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Yakin Mau Keluar?</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">Jika Keluar Anda Harus Login Terlebih Dahulu !</div>
-                              <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                                <a class="btn btn-primary" href="logout.php">Keluar</a>
+
+
+</div>
+
+
+
+                          <!-- Scroll to Top Button-->
+                          <a class="scroll-to-top rounded" href="#page-top">
+                            <i class="fas fa-angle-up"></i>
+                          </a>
+
+                          <!-- Logout Modal-->
+                          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Yakin Mau Keluar?</h5>
+                                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">Jika Keluar Anda Harus Login Terlebih Dahulu !</div>
+                                <div class="modal-footer">
+                                  <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                                  <a class="btn btn-primary" href="logout.php">Keluar</a>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
 
+                          <!-- Bootstrap core JavaScript-->
+                          <script src="vendor/jquery/jquery.min.js"></script>
+                          <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                        <!-- Bootstrap core JavaScript-->
-                        <script src="vendor/jquery/jquery.min.js"></script>
-                        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                          <!-- Core plugin JavaScript-->
+                          <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-                        <!-- Core plugin JavaScript-->
-                        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+                          <!-- Custom scripts for all pages-->
+                          <script src="js/sb-admin-2.min.js"></script>
 
-                        <!-- Custom scripts for all pages-->
-                        <script src="js/sb-admin-2.min.js"></script>
+                          <!-- Page level plugins -->
+                          <script src="vendor/chart.js/Chart.min.js"></script>
 
-                        <!-- Page level plugins -->
-                        <script src="vendor/chart.js/Chart.min.js"></script>
+                          <!-- Page level custom scripts -->
+                          <script src="js/demo/chart-area-demo.js"></script>
+                          <script src="js/demo/chart-pie-demo.js"></script>
 
-                        <!-- Page level custom scripts -->
-                        <script src="js/demo/chart-area-demo.js"></script>
-                        <script src="js/demo/chart-pie-demo.js"></script>
+                        </body>
 
-                      </body>
-
-                      </html>
-        <?php ob_end_flush() ?>
+                        </html>
+          <?php ob_end_flush() ?>

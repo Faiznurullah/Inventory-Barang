@@ -103,7 +103,7 @@ include 'koneksi.php';
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-            
+
 
 
 
@@ -180,6 +180,23 @@ include 'koneksi.php';
 
 
 </div>
+</div>
+
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+  <div class="container my-auto">
+    <div class="copyright text-center my-auto">
+      <span><p class="mb-1">Copyright &copy; <a href="https://github.com/Faiznurullah" style="text-decoration: none;"><b>Faiz Nurullah</b></a></p></span><br>
+    </div>
+  </div>
+</footer>
+</div>
+<!-- End of Content Wrapper -->
+
+</div>
+
+
+
 
 
         <!-- Scroll to Top Button-->

@@ -119,7 +119,7 @@ error_reporting(0);
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-          
+
 
 
 
@@ -250,6 +250,26 @@ error_reporting(0);
     echo "</div>";
   }
 } ?>
+
+
+
+</div>
+
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+  <div class="container my-auto">
+    <div class="copyright text-center my-auto">
+      <span><p class="mb-1">Copyright &copy; <a href="https://github.com/Faiznurullah" style="text-decoration: none;"><b>Faiz Nurullah</b></a></p></span><br>
+    </div>
+  </div>
+</footer>
+</div>
+<!-- End of Content Wrapper -->
+
+</div>
+</div>
+
+
 
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

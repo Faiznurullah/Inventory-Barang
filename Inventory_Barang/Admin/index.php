@@ -129,7 +129,7 @@ $jum = $row['id'];
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-          
+
 
 
 
@@ -269,32 +269,21 @@ $jum = $row['id'];
 
           <!-- Content Row -->
 
+</div>
+</div>
 
 
+          <!-- Footer -->
+          <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+              <div class="copyright text-center my-auto">
+                <span><p class="mb-1">Copyright &copy; <a href="https://github.com/Faiznurullah" style="text-decoration: none;"><b>Faiz Nurullah</b></a></p></span><br>
+              </div>
+            </div>
+          </footer>
+          </div>
+          <!-- End of Content Wrapper -->
 
-          <!-- Content Row -->
-          <div class="row">
-
-            <!-- Content Column -->
-            <div class="col-lg-12 mb-4">
-
-
-            <div class="col-lg-6 mb-4">
-
-
-        <!-- /.container-fluid -->
-
-
-      <!-- End of Main Content -->
-
-
-      <!-- End of Footer -->
-
-    </div>
-    <!-- End of Content Wrapper -->
-
-  </div>
-  <!-- End of Page Wrapper -->
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">

@@ -136,7 +136,7 @@ ob_start()
 
 
 
-        
+
 
             <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -298,6 +298,18 @@ ob_start()
 </div>
 </div>
 
+</div>
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+  <div class="container my-auto">
+    <div class="copyright text-center my-auto">
+      <span><p class="mb-1">Copyright &copy; <a href="https://github.com/Faiznurullah" style="text-decoration: none;"><b>Faiz Nurullah</b></a></p></span><br>
+    </div>
+  </div>
+</footer>
+</div>
+
+</div>
 
 
 
